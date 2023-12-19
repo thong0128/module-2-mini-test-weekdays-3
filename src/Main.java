@@ -94,6 +94,16 @@ public class Main {
                 , "hunglv0801@gmail.com"
                 , 125);
 
+        employeeManagement(company);
+    }
+
+    private static void employeeManagement(Employee[] company) {
+        int choice = getChoice();
+        resultOut(choice, company);
+        employeeManagement(company);
+    }
+
+    private static int getChoice() {
         Scanner input = new Scanner(System.in);
         int choice = 1;
         do {
@@ -110,6 +120,10 @@ public class Main {
             System.out.print("Enter choice: ");
             choice = input.nextInt();
         }while (choice <= 0 || choice > 7);
+        return choice;
+    }
+
+    private static void resultOut(int choice, Employee[] company) {
         switch (choice) {
             case 1:
                 System.out.println("Company average salary: " + avrSalary(company) + "VND");
