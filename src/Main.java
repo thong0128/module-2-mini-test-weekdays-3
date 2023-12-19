@@ -126,16 +126,16 @@ public class Main {
     private static void resultOut(int choice, Employee[] company) {
         switch (choice) {
             case 1:
-                System.out.println("Company average salary: " + avrSalary(company) + "VND");
+                System.out.printf("Company average salary: %.2f VND %n", avrSalary(company));
                 break;
             case 2:
-                System.out.println("Full time employee average salary: " + fullTimeAvrSalary(company) + "VND");
+                System.out.printf("ull time employee average salary: %.2f VND %n", fullTimeAvrSalary(company));
                 break;
             case 3:
-                System.out.println("Part time employee average salary: " + partTimeAvrSalary(company) + "VND");
+                System.out.printf("Part time employee average salary: %.2f VND %n", partTimeAvrSalary(company));
                 break;
             case 4:
-                System.out.println("Total part time salary: " + partTimeTotalSalary(company) + "VND");
+                System.out.printf("Total part time salary: %.2f VND %n", partTimeTotalSalary(company));
                 break;
             case 5:
                 System.out.println("There are " + moreThanAvr(company) + " people with salary higher than average" );
